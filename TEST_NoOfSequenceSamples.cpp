@@ -7,6 +7,6 @@
 
 TEST_CASE("Read No of sequence samples")
 {
- TotalNoOfSamples=CheckNoOfSequenceSamples(CurrentSamples);
+ int TotalNoOfSamples=CheckNoOfSequenceSamples(CurrentSamples);
  REQUIRE(TotalNoOfSamples == 2);
 }
