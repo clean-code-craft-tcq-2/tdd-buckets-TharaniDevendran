@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 
-#include "test/catch.hpp"
+#include "catch.hpp"
 #include <stdio.h>
 
  int CurrentSamples[7] = {3, 3, 5, 4, 10, 11, 12};
