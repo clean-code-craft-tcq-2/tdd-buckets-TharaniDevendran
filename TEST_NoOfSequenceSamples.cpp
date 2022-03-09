@@ -2,9 +2,8 @@
 
 #include "catch.hpp"
 #include <stdio.h>
-#include "CheckNoOfSequenceSamples.c"
 
- int CurrentSamples[7] = {3, 3, 5, 4, 10, 11, 12};
+int CurrentSamples[7] = {3, 3, 5, 4, 10, 11, 12};
 
 TEST_CASE("Read No of sequence samples")
 {
