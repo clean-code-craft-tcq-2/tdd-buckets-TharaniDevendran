@@ -34,6 +34,7 @@ The expected output would be in comma-separated (csv format):
 Range, Readings
 3-5, 4
 10-12, 3
+
 ```
 
 ## Tasks
@@ -51,3 +52,23 @@ Start Test-driven approach
 1. Write the smallest possible failing test: give input `4,5`. assert output to be `4-5, 2`.
 1. Write the minimum amount of code that'll make it pass.
 1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
+
+Test Specification
+Input:
+    Input can be an integer array with 'n' no of samples. The number of samples can vary for each session.
+    Input should considered as valid only if the sample value is greter than 0 
+    The samples in an array can be consecutive or non-consecutive.
+    Input sample is considered as invalid it is an Empty array or sample contains Negative elements.
+
+Action:
+1. Check whether the input is valid or not
+2. Sort the received sample in ascending.
+3. Fetch the sample ranges.
+4. Find the min and maximum value in the range.
+5. Count the number of values in a range.
+6. Print the min and max range and the number of samples in the range in console.    
+
+Ouput:
+
+Valid Input: print the ranges and it's occurences in csv format 
+Invalid Input: Print as not a valid set of sample to process
