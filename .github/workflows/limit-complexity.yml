@@ -13,4 +13,4 @@ jobs:
       run: pip install lizard
 
     - name: Complexity limits
-      run: $HOME/.local/bin/lizard --exclude "./test/*" --CCN 30
+      run: $HOME/.local/bin/lizard --exclude "./test/*" --CCN 5
