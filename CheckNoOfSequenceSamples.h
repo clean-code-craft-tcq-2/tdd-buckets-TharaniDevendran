@@ -3,4 +3,4 @@
 
 #define MAX_NUMBER_OF_READINGS 50
 
-extern int CheckNoOfSequenceSamples(int* CurrentSamples, int NumberOfSamples);
+extern CheckNoOfSequenceSamples(int *CurrentSamples, int NumberOfSamples);
