@@ -74,5 +74,5 @@ int CheckNoOfSequenceSamples(int *CurrentSamples, int NumberOfSamples)
     int *countOfReadings = provideCountOfDistinctElementsInArray(sortedArray,NumberOfSamples);
     int NoOfSequenceSample = ProvideRangeCountOfSamples(countOfReadings);
     (void)PrintToConsole(NoOfSequenceSample);
-    return NoOfRanges;
+    return NoOfSequenceSample;
 }
