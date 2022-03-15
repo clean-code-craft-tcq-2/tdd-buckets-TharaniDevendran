@@ -53,7 +53,7 @@ Start Test-driven approach
 1. Write the minimum amount of code that'll make it pass.
 1. Refactor any assumptions, continue to pass this test. Do not add any code without a corresponding test.
 
-Test Specification
+## Test specification
 Input:
     Input can be an integer array with 'n' no of samples. The number of samples can vary for each session.
     Input should considered as valid only if the sample value is greter than 0 
