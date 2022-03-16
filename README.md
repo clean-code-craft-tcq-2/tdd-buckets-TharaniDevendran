@@ -55,10 +55,10 @@ Start Test-driven approach
 
 ## Test specification
 Input:
-    Input can be an integer array with 'n' no of samples. The number of samples can vary for each session.
-    Input should considered as valid only if the sample value is greter than 0 
-    The samples in an array can be consecutive or non-consecutive.
-    Input sample is considered as invalid it is an Empty array or sample contains Negative elements.
+1. Input can be an integer array with 'n' no of samples. The number of samples can vary for each session.
+2. Input should considered as valid only if the sample value is greter than 0. 
+3. The samples in an array can be consecutive or non-consecutive.
+4. Input sample is considered as invalid it is an Empty array or sample contains Negative elements.
 
 Action:
 1. Check whether the input is valid or not
@@ -70,5 +70,5 @@ Action:
 
 Ouput:
 
-Valid Input: print the ranges and it's occurences in csv format 
-Invalid Input: Print as not a valid set of sample to process
+1. Valid Input: print the ranges and it's occurences in csv format.
+2. Invalid Input: Print as not a valid set of sample to process
