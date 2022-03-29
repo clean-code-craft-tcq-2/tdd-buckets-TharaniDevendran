@@ -13,7 +13,7 @@ int* ConvertA2D(int *Readings, int NumberOfSamples)
     int ConvertedDigitalArray[12];
     for(int i=0; i<NumberOfSamples;i++)
     {
-        ConvertedDigitalArray[i] = (10* Reading[i] )/ 4094;
+        ConvertedDigitalArray[i] = (10* Readings[i] )/ 4094;
         ConvertedDigitalArray[i] = round(ConvertedDigitalArray[i]);
     }
     return ConvertedDigitalArray;
