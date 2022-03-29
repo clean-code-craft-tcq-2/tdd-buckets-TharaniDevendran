@@ -5,6 +5,7 @@
 int minValues[MAX_NUMBER_OF_READINGS] = {0};
 int maxValues[MAX_NUMBER_OF_READINGS] = {0};
 int countValues[MAX_NUMBER_OF_READINGS] = {0};
+int *arrayToStoreCount;
 
 /* Comparator Function for qsort */
 int compareGivenInputs (const void * firstInput, const void * secondInput) {
@@ -18,8 +19,7 @@ int* SortArray(int *Readings, int NumberOfSamples) {
 
 /* Returns an array with Count of Elements provided in input array*/
 int* provideCountOfDistinctElementsInArray(int *ArrayElements, int sizeOfArray) {
-    int *arrayToStoreCount;
-    arrayToStoreCount = (int*)calloc(MAX_NUMBER_OF_READINGS, sizeof(int));
+     arrayToStoreCount = (int*)calloc(MAX_NUMBER_OF_READINGS, sizeof(int));
     
     for(int i=0; i<sizeOfArray; i++)
     {
@@ -27,7 +27,6 @@ int* provideCountOfDistinctElementsInArray(int *ArrayElements, int sizeOfArray) 
         arrayToStoreCount[index]++;
     }
     return arrayToStoreCount;
-    free(arrayToStoreCount);
 }
 
 /* Finds the range of the reading and returns the number of ranges */
@@ -76,5 +75,6 @@ int CheckNoOfSequenceSamples(int *CurrentSamples, int NumberOfSamples)
     int *countOfReadings = provideCountOfDistinctElementsInArray(sortedArray,NumberOfSamples);
     int NoOfSequenceSample = ProvideRangeCountOfSamples(countOfReadings);
     (void)PrintToConsole(NoOfSequenceSample);
+    free(arrayToStoreCount);
     return NoOfSequenceSample;
 }
