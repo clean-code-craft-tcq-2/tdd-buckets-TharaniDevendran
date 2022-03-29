@@ -1,11 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "CheckNoOfSequenceSamples.h"
 
 int minValues[MAX_NUMBER_OF_READINGS] = {0};
 int maxValues[MAX_NUMBER_OF_READINGS] = {0};
 int countValues[MAX_NUMBER_OF_READINGS] = {0};
 int *arrayToStoreCount;
+
+int* ConvertA2D(int *Readings, int NumberOfSamples)
+{
+    int ConvertedDigitalArray[12];
+    for(i=0; i<NumberOfSamples;i++)
+    {
+        ConvertedDigitalArray[i] = (10* Reading[i] )/ 4094;
+        ConvertedDigitalArray[i] = round(ConvertedDigitalArray[i]);
+    }
+    return ConvertedDigitalArray;
+}
 
 /* Comparator Function for qsort */
 int compareGivenInputs (const void * firstInput, const void * secondInput) {
@@ -71,6 +83,7 @@ void PrintToConsole(int NoOfSequenceSample) {
 
 int CheckNoOfSequenceSamples(int *CurrentSamples, int NumberOfSamples)
 {
+    int *CovertedA2DSample = ConvertA2D(CurrentSamples, NumberOfSamples);
     int *sortedArray =SortArray(CurrentSamples,NumberOfSamples);
     int *countOfReadings = provideCountOfDistinctElementsInArray(sortedArray,NumberOfSamples);
     int NoOfSequenceSample = ProvideRangeCountOfSamples(countOfReadings);
