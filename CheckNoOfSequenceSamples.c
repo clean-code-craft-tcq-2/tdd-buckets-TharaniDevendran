@@ -27,6 +27,7 @@ int* provideCountOfDistinctElementsInArray(int *ArrayElements, int sizeOfArray) 
         arrayToStoreCount[index]++;
     }
     return arrayToStoreCount;
+    free(arrayToStoreCount);
 }
 
 /* Finds the range of the reading and returns the number of ranges */
@@ -76,5 +77,4 @@ int CheckNoOfSequenceSamples(int *CurrentSamples, int NumberOfSamples)
     int NoOfSequenceSample = ProvideRangeCountOfSamples(countOfReadings);
     (void)PrintToConsole(NoOfSequenceSample);
     return NoOfSequenceSample;
-    free(arrayToStoreCount);
 }
