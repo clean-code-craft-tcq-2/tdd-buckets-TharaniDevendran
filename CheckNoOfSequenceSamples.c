@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "CheckNoOfSequenceSamples.h"
 
 int minValues[MAX_NUMBER_OF_READINGS] = {0};
@@ -75,4 +76,5 @@ int CheckNoOfSequenceSamples(int *CurrentSamples, int NumberOfSamples)
     int NoOfSequenceSample = ProvideRangeCountOfSamples(countOfReadings);
     (void)PrintToConsole(NoOfSequenceSample);
     return NoOfSequenceSample;
+    free(arrayToStoreCount);
 }
