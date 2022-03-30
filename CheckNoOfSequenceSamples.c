@@ -7,10 +7,11 @@ int minValues[MAX_NUMBER_OF_READINGS] = {0};
 int maxValues[MAX_NUMBER_OF_READINGS] = {0};
 int countValues[MAX_NUMBER_OF_READINGS] = {0};
 int *arrayToStoreCount;
+int *ConvertedDigitalArray;
 
 int* ConvertA2D(int *Readings, int NumberOfSamples)
 {
-    int ConvertedDigitalArray[12];
+     ConvertedDigitalArray = (int*)calloc(NumberOfSamples, sizeof(int));
     for(int i=0; i<NumberOfSamples;i++)
     {
         ConvertedDigitalArray[i] = (10* Readings[i] )/ 4094;
