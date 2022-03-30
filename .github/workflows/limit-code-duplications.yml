@@ -1,0 +1,17 @@
+name: Limit Duplications
+
+on: [push, pull_request]
+
+jobs:
+  limit-duplications:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install jscpd
+      run: sudo npm install -g jscpd
+
+    - name: No Duplication beyond 5 lines
+      run: jscpd . --min-lines 5 --min-tokens 48 --threshold 0

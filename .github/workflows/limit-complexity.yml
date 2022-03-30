@@ -1,0 +1,16 @@
+name: Complexity limits
+
+on: [push, pull_request]
+
+jobs:
+  complexcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install lizard
+      run: pip install lizard
+
+    - name: Complexity limits
+      run: $HOME/.local/bin/lizard --exclude "./test/*" --CCN 5
