@@ -90,5 +90,6 @@ int CheckNoOfSequenceSamples(int *CurrentSamples, int NumberOfSamples)
     int NoOfSequenceSample = ProvideRangeCountOfSamples(countOfReadings);
     (void)PrintToConsole(NoOfSequenceSample);
     free(arrayToStoreCount);
+    free(ConvertedDigitalArray);
     return NoOfSequenceSample;
 }
