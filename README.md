@@ -55,20 +55,22 @@ Start Test-driven approach
 
 ## Test specification
 Input:
-1. Input can be an integer array with 'n' no of samples. The number of samples can vary for each session.
-2. Input should considered as valid only if the sample value is greter than 0. 
-3. The samples in an array can be consecutive or non-consecutive.
-4. Input sample is considered as invalid it is an Empty array or sample contains Negative elements.
+1. Input can be an integer array with 12 analog samples. 
+2. Input should considered as invalid  if the sample value is greter than 4094. 
+3. The analog samples to be converted to Digital samples
+5. The samples in an array can be consecutive or non-consecutive.
+6. Input sample is considered as invalid it is an Empty array or sample contains Negative elements.
 
 Action:
-1. Check whether the input is valid or not
-2. Sort the received sample in ascending.
-3. Fetch the sample ranges.
-4. Find the min and maximum value in the range.
-5. Count the number of values in a range.
-6. Print the min and max range and the number of samples in the range in console.    
+1. Check whether the input is valid or not. Assume the sample value as 0 for a invalid sample
+2. Conver the Analog samples to digital
+3. Sort the received sample in ascending.
+4. Fetch the sample ranges.
+5. Find the min and maximum value in the range.
+6. Count the number of values in a range.
+7. Print the min and max range and the number of samples in the range in console.    
 
 Ouput:
 
 1. Valid Input: print the ranges and it's occurences in csv format.
-2. Invalid Input: Print as not a valid set of sample to process
+
