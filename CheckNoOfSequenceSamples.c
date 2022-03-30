@@ -14,6 +14,10 @@ int* ConvertA2D(int *Readings, int NumberOfSamples)
      ConvertedDigitalArray = (int*)calloc(NumberOfSamples, sizeof(int));
     for(int i=0; i<NumberOfSamples;i++)
     {
+         if (Readings[i] >4094)
+         {
+             Readings[i] = 0 ; //assume the invalid sample as 0
+         }    
         ConvertedDigitalArray[i] = (10* Readings[i] )/ 4094;
         ConvertedDigitalArray[i] = round(ConvertedDigitalArray[i]);
     }
