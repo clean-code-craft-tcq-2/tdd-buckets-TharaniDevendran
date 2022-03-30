@@ -25,9 +25,15 @@ TEST_CASE("Check the no of sequence sample in an invalid array")
  REQUIRE(TotalNoOfSamples == 2);
 }
 
-TEST_CASE("Read No of sequence samples from an array of 12 consecutive Analogsamples")
+TEST_CASE("Read No of sequence samples from an array of Ramdom Analogsamples")
 {
  int CurrentAnalogBit[12] ={409, 818, 1228, 1637, 2047, 2456, 2866, 3275, 3685, 4094, 4503,4918};
  int TotalNoOfSamples=CheckNoOfSequenceSamples(CurrentAnalogBit, 12);
- REQUIRE(TotalNoOfSamples == 2);
+ REQUIRE(TotalNoOfSamples == 4);
+}
+
+TEST_CASE("Check Null Array") {
+  int CurrentAnalogBit[12] = {};
+  int TotalNoOfSamples=CheckNoOfSequenceSamples(CurrentAnalogBit, 12);
+ REQUIRE(TotalNoOfSamples == 1);
 }
